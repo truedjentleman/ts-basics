@@ -13,9 +13,9 @@ console.log(getNameTwo({firstName: "bb", lastName: "fff"})); // bb fff
 
 
 
-// CLOSURE
+//* CLOSURE
 function createAdder(num) {      
-    return (val) => num + val
+    return (val) => num + val   // Closure itself
 }
 
 const creator = createAdder(5)
