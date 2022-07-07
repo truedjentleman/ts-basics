@@ -1,3 +1,5 @@
+export {}
+
 //! ENUMS
 
 const beforeLoad = "beforeLoad";
@@ -24,7 +26,7 @@ console.log(englishLoadingState);  // { beforeLoad: 'Before Load' }
 
 //! Literal types
 
-//* Numeric literals - only  1,2,3 can be valid arguments for fucntion
+//* Numeric literals - only  1,2,3 can be valid arguments for function
 function rollDice(dice: 1 | 2 | 3): number {  
     let pip = 0
     for (let i = 0; i < dice; i++) {
@@ -42,7 +44,7 @@ function sendEvent(name: string, data: unknown): void {
     console.log(`${name}: ${JSON.stringify(data)}`)
 }
 
-sendEvent("addToCart", { cartCount: 12155 })  // is not valid as "addToCart" can't take { cartCount: number} as a second arguments
+// sendEvent("addToCart", { cartCount: 12155 })  // is not valid as with "addToCart"  sendEvent can't take { cartCount: number} as a second arguments
 
 sendEvent("addToCart", { productId: 12155 })   // VALID
 
